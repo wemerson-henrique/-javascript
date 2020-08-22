@@ -1,0 +1,7 @@
+var nome = 'joão'
+var idade = 20
+var nota = 7.4
+
+window.alert('O aluno ' + nome + ' de ' + idade + ' anos tirounata ' + nota + ' na prova.');
+
+window.alert(`O aluno ${nome} de ${idade} anos tirounata ${nota} na prova.`);
