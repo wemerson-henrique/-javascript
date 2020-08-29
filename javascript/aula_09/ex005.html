@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt=br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex005</title>
+    <style>
+        body{
+            background-color: rgb(111, 36, 173);
+            color: rgb(0, 0, 0);
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado.</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavasScript.</p>
+    <div id="msg">Clique em mim</div>
+    <div id="msg1">Clique em mim</div>
+    <div name="msg">Clique em mim</div>
+    <div class="msg">Clique em mim</div>
+    <script>
+
+        var p1 = window.document.getElementsByTagName('p')[1];//varial p1 pega a primeira teg <p>
+        document.write(p1.innerHTML);//window.document.write escreve p1.innerHTML o texto formatado que esta no segundo paragrafo
+        var d = window.document.getElementById('msg');//seleciona a <div> pelo seu id
+        var d1 = window.document.getElementsByName('msg')[0];//seleciona a <div> pelo seu name
+        var d2 = window.document.getElementsByClassName('msg')[0];//seleciona a div pela sua class
+        var d3 = window.document.querySelector('div#msg1');//seleciona a div usando um selector. Se for div usa-se '#' se for class usa-se '.'
+        d3.style.color = 'grey';//muda a cor do texto da div para cinza
+        d2.innerText='O texto foi alterado';//muda o texto da div para: O texto foi alterado
+        d1.style.backgroundColor = 'green';//muda a cor de fundo da div para verde
+        d.style.backgroundColor = 'blue';//muda a cor de fundo da div para azul
+        //d.innerText = 'Estou aguardando...';//muda o texto da div para Estou aguardando. também pode ser feito pelo comando window.document.getElementById('msg').innerText = 'Estou aguardando...';
+
+        //p1.style.color = 'blue';//muda a cor do primeiro paragrafo para azul
+        
+        //var corpo = window.document.body;//variavel corpo resebe a teg <body>
+        //corpo.style.backgroundColor='white';//muda a cor do backgroundColor de budy para white
+        
+        //window.document.write('Esta escrito assim no primiro paragrafo: ' + p1.innerText);;//window.document.write escreve no documento p1.innerText o texto que esta dentro do primeiro paragrafo
+
+        //window.document.write(window.document.charset + "</br>");//window.document.write escreve no documento window.document.charset a linguagem do site
+        //window.document.write(window.navigator.appName + "</br>");//window.document.write escreve no documento, window.navigator.appName o nome do navegador
+        //window.document.write(window.document.URL + "</br>");//window.document.write escreve no documento, window.document.URL o url da pagina
+    </script>
+</body>
+</html>

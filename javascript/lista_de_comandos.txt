@@ -1,0 +1,120 @@
+/*________________________Para mais informações olhar a pasta aula_04_____________________________*/
+
+window.alert('hello word!');//comando para jerar um alert "mensagem"
+window.confirm("Esta gostando de javaSript?");//comando para fazer uma mensagem de confirmação
+window.prompt('Qual é seu nome?');///cria mensagem com um campo digitavel pront "cria uma pergunta"
+var nome = 'Tony'; cria uma veriave com o nome nome e armazena Tony
+var n2 = 5 cria uma veriavel com o nome n2 e armazena 5
+var n3=n1+n2 cria uma veriavel com o nome n3 e armazena a soma de n1+n2
+typeof n; diz quetipo de variavel é n
+
+/*________________________Para mais informações olhar a pasta aula_06_____________________________*/
+ex002
+
+var nome = window.prompt('Qual é seu nome?');///cria uma variavel nome que recebe o valor fornecido pelo campo digitavel
+window.alert('Ola ' + nome + '!');//cria uma alerta que faz aconcatenação "junção" de ola e nome
+
+ex003
+
+var n1 = Number(window.prompt('Digite um numero'));
+//var n1 = Number.parseInt(window.prompt('Digite um numero')); window.prompt resebe o numero em string, Number.parseInt converte a string para um numero inteiro
+
+//Number.parseInt(n); converte a string para um numero inteiro
+//Number.parseFloat(n); converte a string para um numero real
+//Number(n); converte a string para um numero inteiro ou real
+//String(n); converte para string
+//n.toString(); converte a varial que estiver no lugar de n para string
+//n.length conta quantos caracteres a string tem
+//n.toUpperCase(); passa para letras 'MAIÚSCULAS'
+//n.toLowerCase(); passa para letras 'minúsculas'
+
+ex004
+
+//document.write(); escreve na tela
+//n.toFixed(2); coloca o numero com duas casas apos a virgula
+//n.toFixed(2).replace('.',','); n.toFixed(2) coloca o numero com duas cazas apos a virgula, .replace('.',',') subistitui o ponto por virgula
+//n.toLocaleString('pr-BR',{style:'currency',currency:'BRL'}); pr-BR vai localozar a regiao, currency localoza o tipo que nesse caso é dinheiro, BRL que vai ser em real
+
+var nome = 'joão'
+var idade = 20
+var nota = 7.4
+window.alert('O aluno ' + nome + ' de ' + idade + ' anos tirounata ' + nota + ' na prova.');
+window.alert(`O aluno ${nome} de ${idade} anos tirounata ${nota} na prova.`);
+
+/*________________________Aula não possui pasta aula_07_____________________________*/
+Operadores
+
+n1 = 2 + 5 -> soma
+n1 = 2 - 5 -> subtração
+n1 = 2 / 5 -> divisao
+n1 = 2 % 5 -> resto da divisao
+n1 = 2 * 5 -> multiplicação
+n1 = 2 ** 5 -> potenciação
+
+precedência
+1º -> ()
+2º -> **
+3º -> * / %
+4º -> + -
+
+Simplificando
+n = n + 4 -> n += 4
+n = n - 4 -> n -= 4
+n = n / 4 -> n /= 4
+n = n % 4 -> n %= 4
+n = n * 4 -> n *= 4
+n = n ** 4 -> n **= 4
+
+incremento
+n = n + 1 -> n++ ou ++n //fazer teste pois tem leve diferença
+n = n - 1 -> n-- ou --n //fazer teste pois tem leve diferença
+
+/*________________________Aula não possui pasta aula_08_____________________________*/
+Relacionais
+
+2 > 5 = false -> maior
+2 < 5 = true -> menor
+2 >= 5 = false -> maior ou engual
+2 <= 5 = true -> menor ou engual
+2 == 5 = false -> engual
+2 != 5 = true -> diferente
+
+Identidade
+5 == 5 = true -> engual
+5 == '5' = true -> engual
+5 === '5' = false -> identico
+
+Lógicos
+! -> negação "diferente"
+&& -> conjunção "e"
+|| -> disjunção "ou"
+
+Precedência
+1º -> !
+2º -> &&
+3º -> ||
+
+Precedência geral
+1º -> () ** * / % + -
+2º -> > < >=  <=  == !=
+3º -> !
+4º -> &&
+5º -> ||
+
+Ternário
+
+media >= 7.0 ? "Aprovado":"Reprovado"
+
+/*________________________Para mais informações olhar a pasta aula_09_____________________________*/
+
+var p1 = window.document.getElementsByTagName('p')[1];//varial p1 pega a primeira teg <p>
+document.write(p1.innerHTML);//window.document.write escreve p1.innerHTML o texto formatado que esta no segundo paragrafo
+var d = window.document.getElementById('msg');//seleciona a <div> pelo seu id
+var d1 = window.document.getElementsByName('msg')[0];//seleciona a <div> pelo seu name
+var d2 = window.document.getElementsByClassName('msg')[0];//seleciona a div pela sua class
+var d3 = window.document.querySelector('div#msg1');//seleciona a div usando um selector. Se for div usa-se '#' se for class usa-se '.'
+
+d3.style.color = 'grey';//muda a cor do texto da div para cinza
+d2.innerText='O texto foi alterado';//muda o texto da div para: O texto foi alterado
+d1.style.backgroundColor = 'green';//muda a cor de fundo da div para verde
+d.style.backgroundColor = 'blue';//muda a cor de fundo da div para azul
