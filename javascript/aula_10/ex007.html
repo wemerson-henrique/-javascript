@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex007</title>
+    <style>
+        body{
+            font: normal 18pt Arial;
+        }
+        input{
+            font: normal 18pt Arial;
+            width: 100px;
+        }
+        div#result{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando de Dois Números</h1>
+    <input type="number" name="numero1" id="numero1"> + 
+    <input type="number" name="numero2" id="numero2">
+    <input type="button" value="Somar" onclick="somar()">
+    <div id="result">O resultado é: </div>
+
+    <script>
+        function somar(){
+            var valor1 = window.document.getElementById('numero1');//seleciona a primeiro input
+            var valor2 = window.document.querySelector('input#numero2');//seleciona o segundo input
+
+            var n1 = Number(valor1.value);//variavel resebe o valor do input convertido para numero
+            var n2 = Number(valor2.value);//variavel resebe o valor do input convertido para numero
+
+            var soma = n1 + n2;//soma os dois numeros
+
+            var resultado = window.document.getElementById('result');//seleciona a div
+
+            resultado.innerHTML = `A soma de ${n1} mais ${n2} é: <strong>${soma}</strong>`;//muda o texto da div para mostrar o resultado
+        }
+    </script>
+</body>
+</html>

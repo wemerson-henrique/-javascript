@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex006</title>
+    <style>
+        div#area{
+            font: normal 20pt Arial;
+            background-color: seagreen;
+            color: rgb(255, 255, 255);
+            width: 200px;
+            height: 200px;
+            line-height: 200px;/*centraliza na vertical*/
+            text-align: center;/*centraliza na horizontal*/
+        }
+    </style>
+</head>
+<body>
+    <h1>Eventos</h1>
+    <div id="area"> <!--exemplo de como chmar função pelo html onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()"-->
+        Interaja...
+    </div>
+    <script>
+        area.addEventListener('click', clicar);//cria uma espera de evento que executa a função clicar
+        area.addEventListener('mouseenter', entrar);//cria uma espera de evento que executa a função entrar
+        area.addEventListener('mouseout', sair);//cria uma espera de evento que executa a função sair
+
+        function clicar(){
+            var area = window.document.getElementById('area');//seleciona a div area
+            area.style.backgroundColor='blue';//muda a cor de fundo da div para azul
+            area.innerText = 'Você clicou';//muda o texto da div
+        }
+        function entrar(){
+            var area = window.document.getElementById('area');//seleciona a div area
+            area.style.backgroundColor = 'black';
+            area.style.color = 'whitw';
+        }
+        function sair(){
+            var area = window.document.getElementById('area');
+            area.style.color = 'white';
+            area.style.backgroundColor = 'seagreen';
+        }
+    </script>
+</body>
+</html>

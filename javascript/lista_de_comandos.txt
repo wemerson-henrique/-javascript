@@ -118,3 +118,16 @@ d3.style.color = 'grey';//muda a cor do texto da div para cinza
 d2.innerText='O texto foi alterado';//muda o texto da div para: O texto foi alterado
 d1.style.backgroundColor = 'green';//muda a cor de fundo da div para verde
 d.style.backgroundColor = 'blue';//muda a cor de fundo da div para azul
+
+/*________________________Para mais informações olhar a pasta aula_10_____________________________*/
+para saber mais sobre eventos entre no site da MDN
+ex006
+
+area.addEventListener('click', clicar);
+function clicar(){
+var area = window.document.getElementById('area');//seleciona a div area
+area.style.backgroundColor='blue';//muda a cor de fundo da div para azul
+area.innerText = 'Você clicou';//muda o texto da div
+}
+
+ex007
