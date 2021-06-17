@@ -1,7 +1,79 @@
+*{
+    margin: 0;
+    background-color: blueviolet;
+}
+body{
+    font-family: Nunito, sans-serif;
+    color: #1c1c1c;
+}
+h1, h2, h3{
+    font-family: Asap, sans-serif;
+    color: #000000;
+}
 #titulo{
     text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 50px;
+    font-weight: 3em;
 }
-foto-capa{
-   left: 50%;
-   right: 50%;
+#foto{
+    float: left;
+    width: 50%;
+}
+#foto-capa{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+}
+#ingredientes{
+    margin: 0px;
+    float: right;
+    width: 50%;
+}
+table, #titulo-ingredientes{
+    width: 100%;
+    padding-left: 25px;
+}
+
+#ingredientes table td{
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+#preparo{
+    clear: both;
+    width: 100%;
+}
+#preparo h3{
+    text-align: center;
+    padding-top: 3%;
+    padding-bottom: 4%;
+}
+#preparo p{
+    text-align: justify;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 3%;
+}
+#inormacoes-prato p{
+    padding-left: 10%;
+    padding-bottom: 3%;
+}
+#contatos h3{
+    padding-left: 10%;
+    padding-bottom: 4%;
+}
+#contatos table{
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 3%;
+}
+footer p{
+    padding-left: 10%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    background-color: #000000;
+    color: white;
 }
