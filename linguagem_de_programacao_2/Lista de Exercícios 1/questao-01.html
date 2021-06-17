@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <ul>
+            <li>
+                <a href="#questao01">Questão 01</a>
+            </li>
+            <li>
+                <a href="#questao02">Questão 02</a>
+            </li>
+            <li>
+                <a href="#questao03">Questão 03</a>
+            </li> <li>
+                <a href="#questao04">Questão 04</a>
+            </li> <li>
+                <a href="#questao05">Questão 05</a>
+            </li> <li>
+                <a href="#questao06">Questão 06</a>
+            </li> <li>
+                <a href="#questao07">Questão 07</a>
+            </li>    </ul>
+    </div>
+    <div id="corpo" >
+        <div id="questao01">
+            <P>
+                Questão 01:
+                1.Fazer uma função no javaScprit que
+                recebe uma temperatura em celsius e converte para farenheit.
+                F=1.8*C+32
+            </P>
+            <p id="resposta1">
+                0
+            </p>
+        </div>
+        <div id="questao02">
+            <P>
+                Questão 02:
+                2.Faça um programa em javaScprit que leia o lado de um quadrado e mostre seu perímetro e área. A=L2 P=L*4
+            </P>
+            <p id="resposta2">
+                0
+            </p>
+        </div>
+    </div>
+
+    <script>
+        /*
+        var c = Number.parseFloat(window.prompt("Escreva a temperatura em celsius"));
+        var f = 1.8*c+32;
+        window.document.getElementById('resposta1').innerHTML=f;
+        */
+
+        var H = Number.parseFloat(window.prompt("A altura do retamgulo"));
+        var B = Number.parseFloat(window.prompt("A base do retamgulo"));
+        var A=B*H;
+        var P=2*B+2*H
+        window.document.getElementById('resposta2').innerHTML="A area é: " , f + " O perimetro é: " , P;
+    </script>
+</body>
+</html>
