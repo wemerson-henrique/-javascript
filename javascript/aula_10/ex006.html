@@ -25,6 +25,14 @@
         area.addEventListener('click', clicar);//cria uma espera de evento que executa a função clicar
         area.addEventListener('mouseenter', entrar);//cria uma espera de evento que executa a função entrar
         area.addEventListener('mouseout', sair);//cria uma espera de evento que executa a função sair
+        /*Os eventos do mouse pode ser: 
+        "mouseenter" cousa quando o mouse entrar na area
+        "mousemove" cousa quando o mouse move na area
+        "mousedown" cousa quando o mouse é clicado e fica seguro na area
+        "mouseup" cousa quando o mouse e soutado apos clicar na area
+        "click" cousa quando o mouse é clicado na area, é um click normal
+        "mouseout" cousa quando o mouse sai da area
+        */
 
         function clicar(){
             var area = window.document.getElementById('area');//seleciona a div area
