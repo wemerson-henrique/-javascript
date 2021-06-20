@@ -1,3 +1,4 @@
+<!--Feito por wemerson henrique em 20/06/2021-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,13 +8,216 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Escolha o exercicio</h1>
-    <ul>
-        <li>
-            <a href="questao-01.html">
-                questao 01
-            </a>
-        </li>
-    </ul>
+    <div id="corpo" >
+        <div id="questao01">
+            <P>
+                Questão 01:
+                1.Fazer uma função no javaScprit que
+                recebe uma temperatura em celsius e converte para farenheit.
+                F=1.8*C+32
+            </P>
+            <p>
+                <button type="submit" id="chamarfuncao1">
+                    Calcular
+                </button>
+            </p>
+            <p id="resposta1">
+                0
+            </p>
+        </div>
+        <div id="questao02">
+            <P>
+                Questão 02:
+                2.Faça um programa em javaScprit que leia o lado de um quadrado e mostre seu perímetro e área. A=L2 P=L*4
+            </P>
+            <p>
+                <button type="submit" id="chamarfuncao2">
+                    Calcular
+                </button>
+            </p>
+            <p id="resposta2">
+                0
+            </p>
+        </div>
+        <div id="questao03">
+            <P>
+                Questão 03:
+                3.Faça um programa em javaScprit que
+                leia os dois lados do retangunlo e
+                mostre o perímetro e área. A=B*H P=2*B+2*H
+            </P>
+            <p>
+                <button type="submit" id="chamarfuncao3">
+                    Calcular
+                </button>
+            </p>
+            <p id="resposta3">
+                0
+            </p>
+        </div>
+        <div id="questao4">
+            <P>
+                Questão 04:
+                4.Leia um valor inteiro em horas, e imprima-o em minutos.
+            </P>
+            <p>
+                <button type="submit" id="chamarfuncao4">
+                    Calcular
+                </button>
+            </p>
+            <p id="resposta4">
+                0
+            </p>
+        </div>
+        <div id="questao5">
+            <P>
+                Questão 05:
+                5.Faça uma página que leia quatro idades e calcule a média das mesmas.
+            </P>
+            <p>
+                <button type="submit" id="chamarfuncao5">
+                    Calcular
+                </button>
+            </p>
+            <p id="resposta5">
+                0
+            </p>
+        </div>
+        <div id="questao6">
+            <P>
+                Questão 06:
+                6.Maior de dois números
+            </P>
+            <p>
+                <button type="submit" id="chamarfuncao6">
+                    Calcular
+                </button>
+            </p>
+            <p id="resposta6">
+                0
+            </p>
+        </div>
+        <div id="questao7">
+            <P>
+                Questão 07:
+                7.Fazer uma função no JavaScript que recebe altura e peso e calcule o imc. IMC = peso/altura2.
+                <br>
+                ▫Se o IMC for menor que 25, mostrar a mensagem: “Peso Ideal”
+                <br>▫Caso IMC seja maior que 25, mostra a mensagem: “Acima do peso”
+            </P>
+            <p>
+                <button type="submit" id="chamarfuncao7">
+                    Calcular
+                </button>
+            </p>
+            <p id="resposta7">
+                0
+            </p>
+        </div>
+        <div id="questao8">
+            <P>
+                Questão 08:
+                8.Fazer uma função no JavaScript que um número positivo (N) e mostre a contagem dos números em ordem decrescente de N até 0.
+            </P>
+            <p>
+                <button type="submit" id="chamarfuncao8">
+                    Calcular
+                </button>
+            </p>
+            <p id="resposta8">
+                Resultado: 
+            </p>
+        </div>
+    </div>
+
+    <script>
+        //Feito por wemerson henrique em 20/06/2021
+        chamarfuncao1.addEventListener('click', funcao1);
+        chamarfuncao2.addEventListener('click', funcao2);
+        chamarfuncao3.addEventListener('click', funcao3);
+        chamarfuncao4.addEventListener('click', funcao4);
+        chamarfuncao5.addEventListener('click', funcao5);
+        chamarfuncao6.addEventListener('click', funcao6);
+        chamarfuncao7.addEventListener('click', funcao7);
+        chamarfuncao8.addEventListener('click', funcao8);
+
+        //QUESTAO-01
+        function funcao1 () {
+            var c = Number.parseFloat(window.prompt("Escreva a temperatura em celsius"));
+            var f = 1.8*c+32;
+            window.document.getElementById('resposta1').innerHTML=f;
+        }
+
+        //QUESTAO-02
+        function funcao2 () {
+            var L = Number.parseFloat(window.prompt("Escreva tamanho do lado do quadrado"));
+            var A=L**2;
+            var P=L*4;
+            window.document.getElementById('resposta2').innerHTML="A area é: " + A + " O perimetro é: " + P;
+        }
+        
+
+        //QUESTAO-03
+        function funcao3 (){
+            var H = Number.parseFloat(window.prompt("A altura do retamgulo"));
+            var B = Number.parseFloat(window.prompt("A base do retamgulo"));
+            var A=B*H;
+            var P=2*B+2*H;
+            window.document.getElementById('resposta3').innerHTML="A area é: " + A + " O perimetro é: " + P;
+        }
+        
+
+        //QUESTAO-04
+        function funcao4 () {
+            var hora = Number.parseInt(window.prompt("Escreva a hora atual"));
+            var min = hora*60;
+            window.document.getElementById('resposta4').innerHTML="As horas em minutos são: " + min;
+        }
+
+        //QUESTAO-05
+        function funcao5 () {
+            var idade1 = Number.parseInt(window.prompt("Escreva a primeira idade"));
+            var idade2 = Number.parseInt(window.prompt("Escreva a segunda idade"));
+            var idade3 = Number.parseInt(window.prompt("Escreva a tercira idade"));
+            var idade4 = Number.parseInt(window.prompt("Escreva a quarta idade"));
+            var media = (idade1 + idade2 + idade3 + idade4)/4;
+            window.document.getElementById('resposta5').innerHTML="A média das idades é: " + media;
+        }
+
+        //QUESTAO-06
+        function funcao6 () {
+            var num1 = Number.parseInt(window.prompt("Escreva um numero"));
+            var num2 = Number.parseInt(window.prompt("Escreva outro numero"));
+            if (num1 > num2) {
+                window.document.getElementById('resposta6').innerHTML=num1 + " é maior que " + num2;
+            }else if (num1 < num2) {
+                window.document.getElementById('resposta6').innerHTML=num2 + " é maior que " + num1;
+            } else {
+                window.document.getElementById('resposta6').innerHTML="Os numeros são inguais";
+            }
+        }
+
+        //QUESTAO-07
+        function funcao7 () {
+            var peso = Number.parseFloat(window.prompt("Escreva seu peso"));
+            var altura = Number.parseFloat(window.prompt("Escreva sua altura"));
+            IMC= peso/(altura*2);
+            if (IMC < 25) {
+                window.document.getElementById('resposta7').innerHTML="Peso  Ideal " + IMC;
+            } else if (IMC > 25) {
+                window.document.getElementById('resposta7').innerHTML="Acima do peso " + IMC;
+            } else {
+                window.document.getElementById('resposta7').innerHTML= IMC;
+            }
+        }
+
+        //QUESTAO-08
+        function funcao8 (){
+            var num = Number.parseInt(window.prompt("Escreva um numero"));
+            for (var i = num; i >= 0; i--) {
+                window.document.getElementById('resposta8').innerHTML+= i + " ";
+            }
+        }
+    </script>
 </body>
 </html>
