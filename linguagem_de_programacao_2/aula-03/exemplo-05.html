@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="corpo">
+    <h2>Adicionando Elementos no HTML</h2>
+    <p id="descricao">Vamos apreder a função createElement</p>
+    Nome <input type="text" name="" id="texto"> <input type="button" value="Adicinar" onclick="adicionar(texto.value)">
+    <script>
+        function  remover() {
+            var nome = window.document.getElementById('texto').value;
+            //criando elemento e inserindo no body
+            var paragrafo = window.document.createElement('p');
+            paragrafo.innerHTML=nome + " cadastrado com sucesso";
+            var pai = window.document.getElementById('corpo');
+            body.appendChild(paragrafo);
+        }
+    </script>
+</body>
+</html>

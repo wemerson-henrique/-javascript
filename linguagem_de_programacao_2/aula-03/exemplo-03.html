@@ -7,13 +7,13 @@
     <title>Document</title>
 </head>
 <body>
-    <h2>Calculo de hipotenusa</h2>
-    Cat1 <input type="text" name="" id="cat1"><br>
-    Cat2 <input type="text" name="" id="cat2"><br><br>
+    <h2>Calculo de Hipotenusa</h2>
+    Cat1 <input type="number" name="" id="cat1"><br>
+    Cat2 <input type="number" name="" id="cat2"><br><br>
     <input type="button" value="Calcular" onclick="calcular(cat1.value,cat2.value)">
     <p id="resposta">Reposta</p>
     <script>
-        function calcular(cat1,cat2) {
+        function calcular(cat1,cat2) {//ao passar as entradas elas não precisão ser obrigatoria a mente os nomes dos values, dessa forma aqui pode colocar qualquer nome
             var h = Math.sqrt(Math.pow(cat1,2) + Math.pow(cat2,2));
             window.document.getElementById('resposta').innerHTML="A hipotenusa é: "+ h;
         }
