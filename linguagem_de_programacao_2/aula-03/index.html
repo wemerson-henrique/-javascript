@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Calculo de imc</h2>
+    Peso: <input type="text" name="" id="fpeso"><br>
+    Altura <input type="text" name="" id="faltura"><br>
+    <input type="button" value="Calcular" onclick="calcular()"><br><br>
+    <p id="resposta">resposta</p>
+    <script>
+        function calcular() {
+            var peso = window.document.getElementById('fpeso').value;
+            var altura = window.document.getElementById('faltura').value;
+            var imc = peso/Math.pow(altura,2);
+            if(imc < 25){
+                window.document.getElementById('resposta').innerHTML="Peso ideal! IMC: " + imc;
+            }else{
+                window.document.getElementById('resposta').innerHTML="Acima do peso ideal! IMC: " + imc;
+            }
+        }
+    </script>
+</body>
+</html>
