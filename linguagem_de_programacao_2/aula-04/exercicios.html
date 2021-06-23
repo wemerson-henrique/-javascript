@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Exercícios</h1>
+    <div id="enunciado">
+        <p>
+            1. Faça uma função no JavaScript que leia dois catetos de um triangulo e mostre o resultado da hipotenusa usando a seguinte formula:
+        </p>
+        <p>
+            H=√c12+c22
+        </p>
+        <p>
+            • Use o JavaScript para criar o campo de resposta<br>
+            • Use o JavaScript para remover os campos de entrada.
+        </p>
+    </div>
+    <hr>
+    <div id="resolucao">
+        <p>Escreva o catetos para calcular a hipotenusa</p><br>
+        <table id="corpo">
+            <tr id="inpcat1">
+                <td>
+                    Cateto 1 
+                </td>
+                <td id="filho1">
+                    <input type="number" name="" id="cat1">
+                </td>
+                <!--Exeplo de rowspan--td rowspan="2">
+                    <input type="submit" value="CALCULAR">
+                </td-->
+            </tr>
+            <tr id="inpcat2">
+                <td>
+                    Cateto 2 
+                </td>
+                <td id="filho2">
+                    <input type="number" name="" id="cat2">
+                </td>
+            </tr>
+            <tr style="text-align: right;">
+                <td colspan="2">
+                    <input type="button" value="Calcular" onclick="calcular(cat1.value,cat2.value)">
+                </td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        function calcular (c1,c2){
+            var h = Math.sqrt(Math.pow(c1,2) + Math.pow(c2,2));
+            
+            
+            //criando elemento e inserindo no body
+            var paragrafo = window.document.createElement('p');
+            paragrafo.innerHTML="A hipotenusa é: "+ h;
+            var body = window.document.getElementById('corpo');
+            body.appendChild(paragrafo);
+
+            var pai = window.document.getElementById('inpcat1');
+            var filho = window.document.getElementById('filho1');
+            pai.removeChild(filho);
+            var pai = window.document.getElementById('inpcat2');
+            var filho2 = window.document.getElementById('filho2');
+            pai.removeChild(filho2);
+        }
+    </script>
+</body>
+</html>

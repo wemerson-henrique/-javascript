@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="corpo">
+    <h2>Calculo de Hipotenusa</h2>
+    <p id="input">
+        Cat1 <input type="number" name="" id="cat1"><br>
+        Cat2 <input type="number" name="" id="cat2"><br>
+
+        <input type="button" value="Calcular" onclick="calcular(cat1.value,cat2.value)">
+    </p>
+    
+    <script>
+        function calcular(cat1,cat2) {//ao passar as entradas elas não precisão ser obrigatoria a mente os nomes dos values, dessa forma aqui pode colocar qualquer nome
+            var h = Math.sqrt(Math.pow(cat1,2) + Math.pow(cat2,2));
+            //criando elemento e inserindo no body
+            var paragrafo = window.document.createElement('p');
+            paragrafo.innerHTML="A hipotenusa é: "+ h;
+            var body = window.document.getElementById('corpo');
+            body.appendChild(paragrafo);
+            
+            //removendo os inputs
+            var pai = window.document.getElementById('corpo');
+            var filho = window.document.getElementById('input');
+            pai.removeChild(filho);
+            /*
+            var filho2 = window.document.getElementById('cat2');
+            pai.removeChild(filho2);
+            */
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!--Feito por wemerson henrique em 23/06/2021
+
+Referencia: Curso de HTML #24 - Javascript Parte 7 - Arrays (https://www.youtube.com/watch?v=FHODXdwFg7w&t=2s)
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Aula Arrays</h2>
+    <script>
+        var coisas = new Array();//cria uma arrei, se quser ja pode armazer o conteudo
+
+        coisas[0] = "Bola"; //exemplo de criação de elemento, aqui é armazenado "Bola" na posisão 0 do array "coisas"
+        coisas[1] = "Pente";
+        coisas[2] = "Sapato";
+        coisas[3] = "Avião";
+        coisas[4] = "Mouse";
+        coisas[5] = "Livro";
+        coisas[6] = "Espada"; //Ao adicionar um novo elemento ele é adicionado automaticamente
+
+        coisas.push("Carro"); //o comando "push" ira adicionar (ou impurar) um novo elemento no final do array "coisas"
+        coisas.push("TV");
+
+        coisas.pop(); //o comando "pop" ira remover o ultimo elemento no final do array "coisas"
+        coisas.pop();
+        coisas.pop();
+
+        coisas.unshift("Boneco");//o comando "unshift" ira adicionar um novo elemento no inicio do array "coisas"
+        coisas.unshift("Porta");
+
+        coisas.shift(); //o comando "shift" ira remover o primeiro elemento no inicio do array "coisas"
+        coisas.shift();
+        coisas.shift();
+
+        window.alert(coisas[3]);//exeplo de recuperação de um dado do array, aqui é indicado que é para pegar o que esta no posição 3 do array "coisas"; issso então é printado na tela atraves de um comando alert
+        //OBS: caso deseja mudar pasta trocar o posição de recuperação
+
+        window.document.write(coisas[0]); //exeplo de recuperação de um dado do array, aqui é indicado que é para pegar o que esta no posição 0 do array "coisas"; issso então é printado na tela atraves de um comando write
+
+        window.document.write("<br><hr>"); //"<br>"vai fazer quebra de linha, "<hr>" vai colocar uma linha verticau para cepara do for
+
+        for(i=0;i<coisas.length;i++){ //o for ira percorrer o vetor iniciando da posição 0 até chegar no seu tamanho maximo o qual é indicado por "coisas.length" 
+            window.document.write(coisas[i]+"<br>"); //vai mostrar cada posição "i" atravez de uma função write, o "<br>" serve para dar uma quebra de linha
+        }
+        //--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        var num = new Array(7,3,5,1,9,2,0,4,8); //vai criar um array "num" de numeros de 1 a 9
+
+        window.document.write("<br><hr>"); //"<br>"vai fazer quebra de linha, "<hr>" vai colocar uma linha verticau para cepara do for "num" com o for anterior
+
+        num.sort(); //o a função "sort" vai ordenar os elementos do array, por padão ele ordena do domenor para maior em ordem cressente
+
+        for(var i=0; i< num.length; i++){ //for para percorrer r mostar os elementos do vetor "num"
+            window.document.write(num[i]);
+            window.document.write("<br>");//"<br>" para fazer quebra de linha
+        }
+    </script>
+</body>
+</html>
