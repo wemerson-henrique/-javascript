@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Curso em Video</h2>
+    <script>
+        /*
+        VARIÁVEIS SIMPLES: Variáveis simples só conseguem armazenar um valor por vez
+        VARIÁVEIS COMPOSTAS: Variáveis compostas devem ser capazes de armazenar város valores em uma mesma estrutura
+
+        ATENCAO: coloque nomes cloras nas suas variaveis
+        //O vetor sempre começa na posição 0
+        */
+       let num = [5,8,2,9,3]; //cria uma varivel que contem um vetor
+       
+       window.document.write(`Nasso vetor é o ${num}`); //mostra o vetor na tela usandoa função write
+
+       window.document.write(`<br>`); // "<br>" para quebrar a linha
+
+       window.document.write(`O vetor ordenado é: ${num.sort()}`); // "num.sort()" vai colocar o vetor em ordem
+       
+       window.document.write(`<br>`); // "<br>" para quebrar a linha
+
+       num.push(1); // "push" vai adicionar um elemento no final do array
+       
+       window.document.write(`Nasso vetor é apos o metodo "push()" ${num}`); //mostra o vetor na tela usandoa função write
+
+       window.document.write(`<br>`); // "<br>" para quebrar a linha
+
+       //ATENÇÃO: a orden das funções vão emportar nesse caso o vetor não vai ficar ordenado pois depois de ter ordenado ele foi acressentado o numero "1" na posição final
+
+
+       window.document.write(`O vetor tem ${num.length} posições.`); //mostra o tamanho do vetor
+
+       window.document.write(`<br>`); // "<br>" para quebrar a linha
+
+       window.document.write(`O primeiro valor do vetor é: ${num[0]}`); //vai mostrar o num no posição 0
+
+
+       
+
+       /*
+       console.log(`${num}`); //mostrar o vetor com a função log que exibira no console
+       window.document.write(`Nasso vetor é o ${num}`); //mostra o vetor na tela usandoa função write
+       num[5] = 6; //metodo padrão para adicionar elemneto, onde é preciso indicar o indexe de onde sera enserido o numero
+       num.push(7); //meto "push" é para adicionar um elemento na ultima posição do array
+       num.length; //atributo "length" que retorna o comprimento do array "num", ele não tem "()" ,ou seja, é errado escrever "num.length();"
+       num.sort(); //metodo para ordenar todos os dados do array
+       */
+    </script>
+</body>
+</html>
