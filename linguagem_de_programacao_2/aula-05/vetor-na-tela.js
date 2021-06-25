@@ -44,7 +44,7 @@ let pos1 = num.indexOf(4); // a variavel "pos" ira receber a chave da posição 
 window.document.write(`<br><br>`); //"<br>" vai fazer uma quebra de linha
 
 if (pos1 == -1) {
-    window.document.write(`A valor 8 não foi encontrado`); //vai exibir uma mensagem, "<br>" vai fazer uma quebra de linha
+    window.document.write(`A valor 8 não foi encontrado <br><br>`); //vai exibir uma mensagem, "<br>" vai fazer uma quebra de linha
 } else {
     window.document.write(`A valor 4 esta na posição ${pos}<br><br>`); //vai exibir uma mensagem, "<br>" vai fazer uma quebra de linha
 }
