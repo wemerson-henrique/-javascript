@@ -8,5 +8,200 @@
 </head>
 <body>
     <h2>Lista de exercícios 2</h2>
+    <div id="quest1">
+        <p> 1. Obtenha o valor "Volvo" da cars matirz</p>
+        <button id="chamarquestao1">RESULTADO</button>
+    </div>
+    <hr>
+    <div id="quest2">
+        <p> 2. Altere o primeiro item de cars para "Ford"</p>
+        <button id="chamarquestao2">RESULTADO</button>
+    </div>
+    <hr>
+    <div id="quest3">
+        <p> 3. Envie uma mensagem de alerta que contenha o número de itens do array usando a propriedade correta</p>
+        <button id="chamarquestao3">RESULTADO</button>
+    </div>
+    <hr>
+    <div id="quest4">
+        <p> 4. Aqui vai  a questaão</p>
+        <p id="enunciado">Escreva 3 números</p>
+        <input type="number" name="" id="numero1"><br>
+        <input type="number" name="" id="numero2"><br>
+        <input type="number" name="" id="numero3"><br>
+        <button id="chamarquestao4">RESULTADO</button>
+    </div>
+    <hr>
+    <div id="quest5">
+        <p> 5. Obtenha o valor "Volvo" da cars matirz</p>
+        <button id="chamarquestao5">RESULTADO</button>
+    </div>
+    <script>
+        //comando para criar lista de eventios que executão a função quando clicado nos botões
+        chamarquestao1.addEventListener('click', questao1);
+        chamarquestao2.addEventListener('click', questao2);
+        chamarquestao3.addEventListener('click', questao3);
+        chamarquestao4.addEventListener('click', questao4);
+        chamarquestao5.addEventListener('click', questao5);
+        
+        function questao1 () {
+            //criando o vetor
+            let cars = ["Saab","Volvo","BMW"];
+
+            //criando um paragrafo chamado vetor
+            var vetor = window.document.createElement('p');
+
+            //adiciona inuciado em um paragrafo 'p' chamado "vetor"
+            vetor.innerHTML=`O vetor é: |`;
+
+            //for para adicionar os valores ao paragrafo vetor
+            for (var i in cars) {
+                vetor.innerHTML += `${cars[i]} | `;
+            }
+            
+            //procurando o valor "Volvo"
+            var x = cars.indexOf("Volvo");
+            
+            //criando um paragrafo 
+            var resposta = window.document.createElement('p');
+            //escrevando a resposta no parangrafo
+            resposta.innerHTML=`Resposta: O valor "${cars[x]}" foi encontrado no índice "${x}"`;
+            
+            //selecionando onde o para paragrafo sera enserido (o pai do paragrafo)
+            var pai = window.document.getElementById('quest1');
+            //adicionando o paragrafo "vetor" a div (ou ao seu pai)
+            pai.appendChild(vetor);
+            //adicionando o paragrafo "resposta" a div (ou ao seu pai)
+            pai.appendChild(resposta);
+        }
+        function questao2 () {
+            //criando o vetor
+            let cars = ["Volvo","Jeep","Mercedes"];
+
+            //criando um paragrafo chamado vetor
+            var vetor = window.document.createElement('p');
+
+            //adiciona inuciado em um paragrafo 'p' chamado "vetor"
+            vetor.innerHTML=`O vetor é: |`;
+
+            //for para adicionar os valores ao paragrafo vetor
+            for (var i in cars) {
+                vetor.innerHTML += `${cars[i]} | `;
+            }
+
+            //altera a primeira posição por "Ford"
+            cars[0]="Ford";
+
+            //adiciona inuciado em um paragrafo 'p' chamado "vetor"
+            vetor.innerHTML += `<br><br> O vetor depois da mudança é: |`;
+
+            //for para mostrar os valores depois da mudança
+            for (var i in cars) {
+                vetor.innerHTML += `${cars[i]} | `;
+            }
+
+            //selecionando onde o para paragrafo sera enserido (o pai do paragrafo)
+            var pai = window.document.getElementById('quest2');
+
+            //adicionando o paragrafo "vetor" a div (ou ao seu pai)
+            pai.appendChild(vetor);
+        }
+        function questao3 () {
+            //criando o vetor
+            let cars = ["Volvo","Jeep","Mercedes"];
+
+            //cria um alerta que exice o número de itens do array
+            window.alert(`O vetor tem ${cars.length} itens`);
+        }
+        function questao4 (v1,v2,v3) {
+            var numeros = new Array();
+            numeros.push(window.document.getElementById('numero1').value);
+            numeros.push(window.document.getElementById('numero2').value);
+            numeros.push(window.document.getElementById('numero3').value);
+            var resultado = window.document.createElement('p');
+
+            //adiciona inuciado em um paragrafo 'p' chamado "vetor"
+            resultado.innerHTML += `<br><br> O vetor é: |`;
+
+            //for para mostrar os valores depois da mudança
+            for (var i in numeros) {
+                resultado.innerHTML += `${numeros[i]} | `;
+            }
+
+            //faz a mudança
+            var a = numeros.length-1;
+            for (var i in numeros) {
+                
+                if (i < a && i != a) {
+                   var trocado = troca(numeros[i],numeros[a]);
+                   numeros[i] = trocado.v1;
+                   numeros[a] = trocado.v2;
+                   a--;
+                }
+            }
+
+            //adiciona inuciado em um paragrafo 'p' chamado "vetor"
+            resultado.innerHTML += `<br><br> O vetor depois da mudança é: |`;
+
+            //for para mostrar os valores depois da mudança
+            for (var i in numeros) {
+                resultado.innerHTML += `${numeros[i]} | `;
+            }
+
+            //selecionando onde o para paragrafo sera enserido (o pai do paragrafo)
+            var pai = window.document.getElementById('quest4');
+            pai.appendChild(resultado);
+        }
+        function questao5 () {
+            var listaA = new Array (1, 2, 3, 4);
+            var listaB = new Array (1, 2, 3, 4);
+            var soma = new Array();
+
+            //para receber a soma
+            for (const i in listaA) {
+                soma[i] = listaA[i] + listaB[i]
+            }
+
+            //criando uma variavel para um paragrafo
+            var resultado = window.document.createElement('p');
+
+            //adiciona inuciado antes do vetor
+            resultado.innerHTML += `<br><br> O vetor listaA é: |`;
+
+            //mostrar vetor listaA
+            for (var i in listaA) {
+                resultado.innerHTML += `${listaA[i]} | `;
+            }
+
+            //adiciona inuciado antes do vetor
+            resultado.innerHTML += `<br><br> O vetor listaB é: |`;
+
+            //mostrar vetor listaB
+            for (var i in listaB) {
+                resultado.innerHTML += `${listaB[i]} | `;
+            }
+
+            //adiciona inuciado antes do vetor
+            resultado.innerHTML += `<br><br> A soma é: |`;
+
+            //mostrar vetor soma
+            for (var i in soma) {
+                resultado.innerHTML += `${soma[i]} | `;
+            }
+
+            //selecionando onde o para paragrafo sera enserido (o pai do paragrafo)
+            var pai = window.document.getElementById('quest5');
+            pai.appendChild(resultado);
+        }
+        function troca(v1, v2){
+            var valor1 = v1;
+            var valor2 = v2;
+            v1 = valor2;
+            v2 = valor1;
+            return {
+                v1,v2
+            }
+        }
+    </script>
 </body>
 </html>
