@@ -123,7 +123,7 @@
             //adiciona inuciado em um paragrafo 'p' chamado "vetor"
             resultado.innerHTML += `<br><br> O vetor é: |`;
 
-            //for para mostrar os valores depois da mudança
+            //for para mostrar os valores do vetor
             for (var i in numeros) {
                 resultado.innerHTML += `${numeros[i]} | `;
             }
@@ -150,6 +150,8 @@
 
             //selecionando onde o para paragrafo sera enserido (o pai do paragrafo)
             var pai = window.document.getElementById('quest4');
+
+            //ensere o paragrafo
             pai.appendChild(resultado);
         }
         function questao5 () {
