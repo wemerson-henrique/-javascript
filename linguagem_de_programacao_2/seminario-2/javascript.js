@@ -1,7 +1,6 @@
 
 calcular.addEventListener('click', funcalcular);
 limpar.addEventListener('click', funlimpar);
-verresposta.addEventListener('click', questao1);
 
 function funcalcular (a1,q,n) {
     var a1 = window.document.getElementById('a1').value;
@@ -22,7 +21,4 @@ function funlimpar(){
     window.document.getElementById('a1').value=null;
     window.document.getElementById('q').value=null;
     window.document.getElementById('n').value=null;
-}
-function questao1(){
-
 }
