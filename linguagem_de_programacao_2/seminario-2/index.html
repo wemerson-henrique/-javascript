@@ -8,7 +8,123 @@
     <title>Seminário 2</title>
 </head>
 <body>
-    <h2>não me decidi</h2>
+    <header>
+        <h1>Matemática</h1>
+        <!--div class="menu">
+            <a href="">Calculadora</a> |
+            <a href="">Calculadora</a>
+        </div-->
+    </header>
+    <div id="corpo">
+        <h2>Progressão Geométrica</h2>
+        <p>Progressão geométrica (P.G.) é toda sequência de números não-nulos em que cada termo, a partir do segundo, é igual ao produto de seu termo procedente por uma constante, denominada razão q da progressão geométrica.</p>
+        <h3>Termo geral de uma P.G.</h3>
+        <p>Vimos que, P.G. (a1, a2, a3, a4, …, an), cada termo, a partir do segundo, é igual ao produto do termo anterior pela razão q, ou seja:</p>
+        <table border="1">
+            <tr>
+                <td>1º termo</td>
+                <td> a<sub>1</sub> = a<sub>1</sub> . q<sup>0</sup></td>
+            </tr>
+            <tr>
+                <td>2º termo</td>
+                <td> a<sub>2</sub> = a<sub>1</sub> . q<sup>1</sup></td>
+            </tr>
+            <tr>
+                <td>3º termo</td>
+                <td> a<sub>3</sub> = a<sub>1</sub> . q<sup>2</sup></td>
+            </tr>
+            <tr>
+                <td>4º termo</td>
+                <td> a<sub>4</sub> = a<sub>1</sub> . q<sup>3</sup></td>
+            </tr>
+            <tr>
+                <td>
+                    . <br>
+                    . <br>
+                    . <br>
+                </td>
+                <td>
+                    . <br>
+                    . <br>
+                    . <br>
+                </td>
+            </tr>
+            <tr>
+                <td>nº termo</td>
+                <td> a<sub>n</sub> = a<sub>1</sub> . q<sup>n - 1</sup></td>
+            </tr>
+        </table>
+        <p>
+            Observando que, em cada igualdade, o expoente da razão é uma unidade inferior ao ´ndice do termo consideraado, obtivemos a fórmula do termo geral:
+        </p>
+        <div id="formula">
+            a<sub>n</sub> = a<sub>1</sub> . q<sup>n-1</sup>
+        </div>
+        <p>
+            onde:
+            <ul>
+                <li>
+                    a<sub>n</sub>: termo geral
+                </li>
+                <li>
+                    a<sub>1</sub>: primeiro termo
+                </li>
+                <li>
+                    q: razão
+                </li>
+                <li>
+                    n: número de termos
+                </li>
+            </ul>
+        </p>
+        <hr>
+        <div id="calculadora">
+            <h2 id="titulo-cal">Calculadora para P.G.</h2>
+            <p>Preencha os campos para fazer o cálculo</p>
+            <table border="1">
+                <form action="" id="form">
+                    <tr>
+                        <td>
+                            a<sub>1</sub>
+                        </td>
+                        <td>
+                            <input type="number" name="" id="a1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            q
+                        </td>
+                        <td>
+                            <input type="number" name="" id="q">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                           n
+                        </td>
+                        <td>
+                            <input type="number" name="" id="n">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="button" value="CALCULAR" id="calcular">
+                        </td>
+                        <td>
+                            <input type="button" value="LIMPAR" id="limpar">
+                        </td>
+                    </tr>
+                </form>
+            </table>
+        </div>
+        <button><a href="questoes.html">Começar teste</a></button>
+    </div>
+    <footer>
+        <p>
+            Copyright © 2021 | Wemerson Henrique
+        </p>
+    </footer>
     <script src="javascript.js"></script>
 </body>
 </html>

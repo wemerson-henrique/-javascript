@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    
+}
+body{
+    background-color: rgb(180, 179, 179);
+    font-family: Nunito, sans-serif;
+    color: #1c1c1c;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+header{
+    background-color: blue;
+    height: auto;
+    text-align: center;
+    font-size: 2em;
+    color: white;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+#corpo{
+    background-color: antiquewhite;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+#corpo table{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+#formula{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+h2, h3{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    font-family: Asap, sans-serif;
+    color: #000000;
+    text-align: center;
+}
+#corpo p{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: justify;
+}
+footer p{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #000000;
+    color: white;
+    text-align: center;
+}
+/*calculadora*/
+#calculadora{
+    background-color: slategrey;
+    width: 80%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 40px;
+}
+#calculadora #titulo-cal{
+    font-size: 2em;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+#calculadora p{
+    padding-left: 0px;
+    padding-bottom: 20px;
+}
+#calculadora table{
+    padding-left: 0px;
+}
+button{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+/*questoes*/
+#questao{
+    background-color: slategrey;
+    width: 80%;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 40px;
+}
+#verresposta{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+#butquest a{
+    text-decoration: none;
+}
