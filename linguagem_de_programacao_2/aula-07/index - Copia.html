@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Objetos no JavaScript</h2>
+    <p id="texto"></p>
+    <input type="button" value="Clicar" onclick="exibir()">
+    <script>
+
+        function exibir(){
+            var carros = [];
+
+            var meucarro = new carro('Ford','ka',2000);
+            var carromae = new carro('Fiat','ka',2000);
+            var carroirma = new carro('Honda','ka',2000);
+
+            carros.push(meucarro);
+            carros.push(carromae);
+            carros.push(carroirma);
+
+
+            var text ="<ul>";
+
+
+            for(var i = 0; i < carros.length; i++){
+                text += `<li> Marca: ${carros[i].marca} | Modelo: ${carros[i].modelo} | Ano: ${carros[i].ano} </li>`;
+            }
+            document.getElementById('texto').innerHTML=text;
+        }
+        function carro(marca,modelo,ano){
+            this.marca = marca;
+            this.modelo = modelo;
+            this.ano = ano;
+        }
+
+        
+    </script>
+</body>
+</html>
