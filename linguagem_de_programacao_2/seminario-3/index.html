@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Seminário 3</title>
+</head>
+<body>
+    <header>
+        <h2>Cadastro para Site de Compras</h2>
+    </header>
+    <div id="corpo">
+        <div id="divForm">
+            <form action="pot" id="from">
+                <fieldset class="dadosUsu">
+                    <legend>Dados do Usuário</legend>
+                    <table border="1">
+                        <tr>
+                            <td>
+                                <label for="">
+                                    Nome:
+                                </label>
+                            </td>
+                            <td>
+                                <input type="text" name="nome" id="nome">
+                            </td>
+                            <td>
+                                <label for="">
+                                    CPF:
+                                </label>
+                            </td>
+                            <td>
+                                <input type="text" name="cpf" id="cpf">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="">
+                                    GR
+                                </label>
+                            </td>
+                            <td>
+                                <input type="text" name="gr" id="gr">
+                            </td>
+                            <td>
+                                Sexo
+                            </td>
+                            <td>
+                                <input type="radio" name="sexo" id="sexo" value="masculino">
+                                <label for="">Masculino</label>
+                                <input type="radio" name="sexo" id="sexo" value="feminino">
+                                <label for="">Feminino</label>
+                                <input type="radio" name="sexo" id="sexo" value="outro">
+                                <label for="">Outro</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="">
+                                    E-mail
+                                </label>
+                            </td>
+                            <td>
+                                <input type="email" name="email" id="email">
+                            </td>
+                            <td>
+                                <label for="">
+                                    Telefone
+                                </label>
+                            </td>
+                            <td>
+                                <input type="text" name="telefonr" id="telefone">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Endereço
+                            </td>
+                            <td colspan="2">
+                                <input type="text" name="endereco" id="endereco">
+                            </td>
+                            <td>
+                                <label for="">
+                                    UF
+                                </label>
+                                <select name="uf" id="uf">
+                                    <option value=""></option>
+                                    <option value="Minas Gerais">MG</option>
+                                    <option value="São Paulo">SP</option>
+                                    <option value="Rio de Janeiro">RJ</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="">
+                                    CEP
+                                </label>
+                            </td>
+                            <td>
+                                <input type="text" name="" id="">
+                            </td>
+                            <td>
+                                <label for="">
+                                    Cidade
+                                </label>
+                            </td>
+                            <td>
+                                <input type="text" name="cidade" id="cidade">
+                            </td>
+                        </tr>
+
+                    </table>
+                </fieldset>
+                <fieldset class="contaUsu">
+                    <legend>Conta do Usuário</legend>
+                    <table border="1">
+                        <tr>
+                            <td>
+                                <label for="">
+                                    Usuário
+                                </label>
+                            </td>
+                            <td>
+                                <input type="text" name="usuario" id="usuario">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="">
+                                    Confirmar Usuário
+                                </label>
+                            </td>
+                            <td>
+                                <input type="text" name="confirmaUsuario" id="usuario">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="">
+                                    Senha
+                                </label>
+                            </td>
+                            <td>
+                                <input type="password" name="senha" id="senha">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="">
+                                    Confirmar Senha
+                                </label>
+                            </td>
+                            <td>
+                                <input type="password" name="confirmasenha" id="senha">
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+                <div class="resposta"></div>
+                <input type="button" value="CADASTRAR">
+                <input type="reset" value="LIMPAR">
+                <input type="button" value="CADASTRAR">
+            </form>
+        </div>
+        <div class="resposta"></div>
+    </div>
+    <footer>
+        <p>
+            Copyright © 2021 | Wemerson Henrique
+        </p>
+    </footer>
+</body>
+</html>

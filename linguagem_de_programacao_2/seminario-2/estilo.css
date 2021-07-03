@@ -1,6 +1,7 @@
 *{
     margin: 0;
-    
+    font-family: Nunito, sans-serif;
+    color: #1c1c1c;
 }
 body{
     background-color: rgb(180, 179, 179);

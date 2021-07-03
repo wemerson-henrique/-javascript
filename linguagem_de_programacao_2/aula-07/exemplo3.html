@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 02 aula 07</title>
+</head>
+<body>
+    <h2>Cadastro de Clientes</h2>
+    <form action="">
+        <table>
+            <tr>
+                <td>
+                    <label for="">
+                        Nome
+                    </label>
+                </td>
+                <td colspan="2">
+                    <input type="text" name="" id="nome">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="">
+                        CPF
+                    </label>
+                </td>
+                <td colspan="2">
+                    <input type="text" name="" id="cpf">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="CADASTRAR" id="cadastrar">
+                </td>
+                <td>
+                    <input type="reset" value="LIMPAR" id="limpar">
+                </td>
+                <td>
+                    <input type="button" value="LISTAR" id="listar">
+                </td>
+            </tr>
+        </table>
+        <p id="resultado"></p>
+    </form>
+
+    <!----------------------------------------------------------------------------------------JavaScript----------------------------------------------------------------------------------------->
+
+    <script>
+        //--------------------------------------------------------Lista de evento de funções para chamar outras funções --------------------------------------------------------
+        
+        cadastrar.addEventListener('click', fcadastrar);//cria um evento de espera de click para o elemento cujo id é "cadastrar", quando clicado vai chmar a função "fcadastrar"
+        listar.addEventListener('click',flistar);//cria um evento de espera de click para o elemento cujo id é "listar", quando clicado vai chmar a função "flistar"
+
+        //----------------------------------------------------------------------------------------------------------------
+
+        var clientes = []; //cria uma arry para armazenar os objetos clientes
+
+        //----------------------------------------------------------------------------------------------------------------
+        
+        function fcadastrar () {
+            var nome = window.document.getElementById('nome').value;//pega o valor do input com id igual a "nome" e armazena na variavel nome
+            var cpf = window.document.getElementById('cpf').value;//pega o valor do input com id igual a "cpf" e armazena na variavel cpf
+
+            var cliente1 = new Cliente(nome,cpf); //cria uma variavel de clente que é do tipo "cliente"
+
+            clientes.push(cliente1);//adiciona o cliente na ultima posição do array
+
+            //window.alert(`Cliente ${nome} cadastrado com sucesso!`); //cria uma alerta que notifica que o Cliente foi criado com sucesso
+
+            window.document.getElementById('resultado').innerHTML = `Altimo cliente cadastrado: ${cliente1.nome}`;//atribui uma mensagem ao elemento cujo id é "resultado"
+        }
+
+        function flistar () {
+            texto = "<table border=1>"//cria uma variavel texto que possui a abertura de uma teg tabela
+
+            texto += "<th>Nome</th><th>CPF</th>"//adiciona os elementos "<th>" a variavel texto
+
+            for(var i = 0; i < clientes.length; i++){
+                texto += `<tr><td>${clientes[i].nome}</td>
+                <td>${clientes[i].cpf}</td></tr>`//adiciona as teges "<tr>" e "<td>" a variavel texto juntamente com as variaveis "nome" e "cpf" contidos no array
+            }
+
+            texto += "</table>"//adiciona o fechamento da teg tabela na variavel texto
+
+            window.document.getElementById('resultado').innerHTML = texto;//atrui ao elemento que tem o id igual a "resultado" o valor contido na variavel "texto"
+        }
+
+        //----------------------------------------------------------------------------------------------------------------
+
+        function Cliente (nome,cpf) { //cria um objeto cliente e passas os atributos nome e cpf
+            this.nome = nome;//atrui o valor nome
+            this.cpf = cpf;//atrui o valor cpf
+        }
+    </script>
+</body>
+</html>
