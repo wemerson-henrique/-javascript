@@ -2,23 +2,34 @@
 *{
     margin: 0;
     font-family: Nunito, sans-serif;
+    background-color:bisque;
 }
 
 /*cabeçalho*/
 header{
-    height: 200px;
+    padding-top: 5%;
+    padding-bottom: 5%;
     background-color: aqua;
     text-align: center;
+}
+header #titulo h2{
+    background-color: aqua;
+    font-size: 2em;
 }
 
 /*corpo*/
 .dadosUsu{
     float: left;
     width:50%;
+    margin-top:5%;
+    margin-left: 5%;
 }
 .contaUsu{
     float: right;
     width:30%;
+    margin-top:5%;
+    margin-right: 5%;
+    margin-bottom: 10%;
 }
 .resposta{
     clear: both;
@@ -26,6 +37,11 @@ header{
 h1, h2, h3{
     font-family: Asap, sans-serif;
     color: #000000;
+}
+#divForm #form #butoes {
+    padding-top: 2%;
+    padding-left: 5%;
+    padding-bottom: 2%;
 }
 
 /*roda pe*/
@@ -36,3 +52,12 @@ footer p{
     color: white;
     text-align: center;
 }
+/*formatação para dispositivos moveis
+@media screen and (min-width: 768px){
+    .dadosUsu{
+        float: none;
+    }
+    .contaUsu{
+        float: none;
+    }
+}*/

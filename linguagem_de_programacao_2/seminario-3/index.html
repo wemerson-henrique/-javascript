@@ -9,11 +9,13 @@
 </head>
 <body>
     <header>
-        <h2>Cadastro para Site de Compras</h2>
+        <div id="titulo">
+            <h2>Cadastro para Site de Compras</h2>
+        </div>
     </header>
     <div id="corpo">
         <div id="divForm">
-            <form action="pot" id="from">
+            <form action="pot" id="form">
                 <fieldset class="dadosUsu">
                     <legend>Dados do Usuário</legend>
                     <table border="1">
@@ -160,9 +162,11 @@
                     </table>
                 </fieldset>
                 <div class="resposta"></div>
-                <input type="button" value="CADASTRAR" id="cadastrar">
-                <input type="reset" value="LIMPAR">
-                <input type="button" value="LISTAR" id="listar">
+                <div id="butoes">
+                    <input type="button" value="CADASTRAR" id="cadastrar">
+                    <input type="reset" value="LIMPAR" id="limpar">
+                    <input type="button" value="LISTAR" id="listar">
+                </div>
             </form>
         </div>
         <div id="listaClientes"></div>

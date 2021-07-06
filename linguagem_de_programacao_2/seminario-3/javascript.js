@@ -7,7 +7,8 @@ function Cadastrar () {
     var nome = window.document.getElementById('nome').value;
     var cpf = window.document.getElementById('cpf').value;
     var gr = window.document.getElementById('gr').value;
-    var sexo = window.document.getElementById('sexo').value;
+    //var sexo = window.document.getElementById('sexo').value;
+    var sexo = document.querySelector('input[id="sexo"]:checked').value;
     var email = window.document.getElementById('email').value;
     var telefone = window.document.getElementById('telefone').value;
     var endereco = window.document.getElementById('endereco').value;
