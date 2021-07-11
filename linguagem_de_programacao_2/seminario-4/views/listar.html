@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Seminário 3</title>
+    <style>
+        /*formatções gerais*/
+*{
+    margin: 0;
+    font-family: Nunito, sans-serif;
+    background-color:bisque;
+}
+
+/*cabeçalho*/
+header{
+    padding-top: 5%;
+    padding-bottom: 5%;
+    background-color: aqua;
+    text-align: center;
+}
+header #titulo h2{
+    background-color: aqua;
+    font-size: 2em;
+}
+
+/*corpo*/
+.tituloCorpo{
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+#listarClientes{
+    text-align: left;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+#listarClientes a{
+    text-decoration: none;
+}
+#listarClientes .bAlterar{
+    padding-right:5%;
+    float: right;
+}
+#listarClientes .bDeletar{
+    padding-right:5%;
+    float: right;
+}
+#listarClientes #nome{
+    float: left;
+    padding-left: 5%;
+    display:inline;
+}
+.limpar{
+    clear: both;
+}
+
+/*roda pe*/
+footer p{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #000000;
+    color: white;
+    text-align: center;
+}
+    </style>
+
+</head>
+<body>
+    <header>
+        <div id="titulo">
+            <h2>Cadastro para Site de Compras</h2>
+        </div>
+    </header>
+    <div id="corpo">
+       <h2 class="tituloCorpo" >Listando</h2>
+       <hr>
+       <!-- IF HAVE ANY USERS -->
+        {% if usuarios|length > 0 %}
+            <!-- LOOPING ALL THE USUARIOS -->
+            {% for user in usuarios %}
+                <div id="listarClientes">
+                    <p id="nome">
+                      {{ user.nome | e }}&nbsp;
+                    </p>
+                    <a href="/edit/{{ user.id | e }}" class="bAlterar">ALTERAR</a>
+                    <a href="/delete/{{ user.id | e }}" class="bDeletar">DELETAR</a>
+                </div>
+                <hr class="limpar">
+            {% endfor %}
+        {% else %}
+            <h4>Usuarios não encontrados !</h4>
+        {% endif %}
+    </div>
+    </div>
+    <footer>
+        <p>
+            Copyright © 2021 | Wemerson Henrique
+        </p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</body>
+</html>

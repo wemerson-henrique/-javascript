@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Seminário 3</title>
+  <style>
+    /*formatções gerais*/
+    *{
+        margin: 0;
+        font-family: Nunito, sans-serif;
+        background-color:bisque;
+    }
+
+    /*cabeçalho*/
+    header{
+        padding-top: 5%;
+        padding-bottom: 5%;
+        background-color: aqua;
+        text-align: center;
+    }
+    header #titulo h2{
+        background-color: aqua;
+        font-size: 2em;
+    }
+
+    /*corpo*/
+    .dadosUsu{
+        float: left;
+        width:50%;
+        margin-top:5%;
+        margin-left: 5%;
+    }
+    .contaUsu{
+        float: right;
+        width:30%;
+        margin-top:5%;
+        margin-right: 5%;
+        margin-bottom: 10%;
+    }
+    .resposta{
+        clear: both;
+    }
+    h1, h2, h3{
+        font-family: Asap, sans-serif;
+        color: #000000;
+    }
+    #divForm #form #butoes {
+        padding-top: 2%;
+        padding-left: 5%;
+        padding-bottom: 2%;
+    }
+
+    /*roda pe*/
+    footer p{
+        padding-top: 50px;
+        padding-bottom: 50px;
+        background-color: #000000;
+        color: white;
+        text-align: center;
+    }
+    /*formatação para dispositivos moveis
+    @media screen and (min-width: 768px){
+        .dadosUsu{
+            float: none;
+        }
+        .contaUsu{
+            float: none;
+        }
+    }*/
+  </style>
+
+</head>
+<body>
+    <header>
+        <div id="titulo">
+            <h2>Fassa as Alteraçõs</h2>
+        </div>
+    </header>
+    <div id="corpo">
+        <div id="divForm">
+            {% if user is empty %}
+                <h3>Usuário com ID Inválido</h3>
+            {% else %}
+                <form action="" method="POST" id="form">
+                    <fieldset class="dadosUsu">
+                        <legend>Dados do Usuário</legend>
+                        <table border="1">
+                            <tr>
+                                <td>
+                                    <label for="">
+                                        Nome:
+                                    </label>
+                                </td>
+                                <td>
+                                    <input type="text" name="nome" id="nome" value="{{ user.nome | e }}">
+                                </td>
+                                <td>
+                                    <label for="">
+                                        CPF:
+                                    </label>
+                                </td>
+                                <td>
+                                    <input type="text" name="cpf" id="cpf" value="{{ user.cpf | e }}">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="">
+                                        GR
+                                    </label>
+                                </td>
+                                <td>
+                                    <input type="text" name="gr" id="gr" value="{{ user.gr | e }}">
+                                </td>
+                                <td>
+                                    Sexo
+                                </td>
+                                <td>
+                                    <input type="radio" name="sexo" id="sexo" value="masculino">
+                                    <label for="">Masculino</label>
+                                    <input type="radio" name="sexo" id="sexo" value="feminino">
+                                    <label for="">Feminino</label>
+                                    <input type="radio" name="sexo" id="sexo" value="outro">
+                                    <label for="">Outro</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="">
+                                        E-mail
+                                    </label>
+                                </td>
+                                <td>
+                                    <input type="email" name="email" id="email" value="{{ user.email | e }}">
+                                </td>
+                                <td>
+                                    <label for="">
+                                        Telefone
+                                    </label>
+                                </td>
+                                <td>
+                                    <input type="text" name="telefone" id="telefone" value="{{ user.telefone | e }}">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Endereço
+                                </td>
+                                <td colspan="2">
+                                    <input type="text" name="endereco" id="endereco" value="{{ user.endereco | e }}">
+                                </td>
+                                <td>
+                                    <label for="">
+                                        UF
+                                    </label>
+                                    <select name="uf" id="uf">
+                                        <option value="{{ user.uf | e }}"></option>
+                                        <option value="Minas Gerais">MG</option>
+                                        <option value="São Paulo">SP</option>
+                                        <option value="Rio de Janeiro">RJ</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="">
+                                        CEP
+                                    </label>
+                                </td>
+                                <td>
+                                    <input type="text" name="cep" id="cep" value="{{ user.cep | e }}">
+                                </td>
+                                <td>
+                                    <label for="">
+                                        Cidade
+                                    </label>
+                                </td>
+                                <td>
+                                    <input type="text" name="cidade" id="cidade" value="{{ user.cidade | e }}">
+                                </td>
+                            </tr>
+
+                        </table>
+                    </fieldset>
+                    <fieldset class="contaUsu">
+                        <legend>Conta do Usuário</legend>
+                        <table border="1">
+                            <tr>
+                                <td>
+                                    <label for="">
+                                        Usuário
+                                    </label>
+                                </td>
+                                <td>
+                                    <input type="text" name="usuario" id="usuario" value="{{ user.usuario | e }}">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="">
+                                        Confirmar Usuário
+                                    </label>
+                                </td>
+                                <td>
+                                    <input type="text" name="confirmaUsuario" id="usuario">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="">
+                                        Senha
+                                    </label>
+                                </td>
+                                <td>
+                                    <input type="password" name="senha" id="senha" value="{{ user.senha | e }}">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="">
+                                        Confirmar Senha
+                                    </label>
+                                </td>
+                                <td>
+                                    <input type="password" name="confirmasenha" id="senha">
+                                </td>
+                            </tr>
+                        </table>
+                    </fieldset>
+                    <div class="resposta"></div>
+                    <div id="butoes">
+                        <input type="submit" value="UPDATE" id="cadastrar">
+                        <input type="reset" value="LIMPAR" id="limpar">
+                    </div>
+                </form>
+            {% endif %}
+        </div>
+        <div id="listaClientes"></div>
+    </div>
+    <footer>
+        <p>
+            Copyright © 2021 | Wemerson Henrique
+        </p>
+    </footer>
+    <script src="javascript.js"></script>
+</body>
+</html>

@@ -6,6 +6,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilo.css">
     <title>Seminário 3</title>
+  <style>
+    /*formatções gerais*/
+    *{
+        margin: 0;
+        font-family: Nunito, sans-serif;
+        background-color:bisque;
+    }
+
+    /*cabeçalho*/
+    header{
+        padding-top: 5%;
+        padding-bottom: 5%;
+        background-color: aqua;
+        text-align: center;
+    }
+    header #titulo h2{
+        background-color: aqua;
+        font-size: 2em;
+    }
+
+    /*corpo*/
+    .dadosUsu{
+        float: left;
+        width:50%;
+        margin-top:5%;
+        margin-left: 5%;
+    }
+    .contaUsu{
+        float: right;
+        width:30%;
+        margin-top:5%;
+        margin-right: 5%;
+        margin-bottom: 10%;
+    }
+    .resposta{
+        clear: both;
+    }
+    h1, h2, h3{
+        font-family: Asap, sans-serif;
+        color: #000000;
+    }
+    #divForm #form #butoes {
+        padding-top: 2%;
+        padding-left: 5%;
+        padding-bottom: 2%;
+    }
+
+    /*roda pe*/
+    footer p{
+        padding-top: 50px;
+        padding-bottom: 50px;
+        background-color: #000000;
+        color: white;
+        text-align: center;
+    }
+    /*formatação para dispositivos moveis
+    @media screen and (min-width: 768px){
+        .dadosUsu{
+            float: none;
+        }
+        .contaUsu{
+            float: none;
+        }
+    }*/
+  </style>
+
 </head>
 <body>
     <header>
@@ -15,7 +81,7 @@
     </header>
     <div id="corpo">
         <div id="divForm">
-            <form action="pot" id="form">
+            <form action="" method="POST" id="form">
                 <fieldset class="dadosUsu">
                     <legend>Dados do Usuário</legend>
                     <table border="1">
@@ -163,9 +229,11 @@
                 </fieldset>
                 <div class="resposta"></div>
                 <div id="butoes">
-                    <input type="button" value="CADASTRAR" id="cadastrar">
+                    <input type="submit" value="CADASTRAR" id="cadastrar">
                     <input type="reset" value="LIMPAR" id="limpar">
-                    <input type="button" value="LISTAR" id="listar">
+                    <a href="/listar/">
+                      <input type="button" value="LISTAR" id="listar">
+                    </a>
                 </div>
             </form>
         </div>

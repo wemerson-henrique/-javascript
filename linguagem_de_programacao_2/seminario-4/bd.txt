@@ -1,0 +1,34 @@
+execute o comando abaixo no seu Banco de Dados para criar a tabela
+
+CREATE TABLE usuario (
+id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+nome VARCHAR(50),
+cpf VARCHAR(50),
+gr VARCHAR(50),
+sexo VARCHAR(9),
+email VARCHAR(50),
+telefone VARCHAR(15),
+endereco VARCHAR(50),
+uf VARCHAR(15),
+cep VARCHAR(10),
+cidade VARCHAR(50),
+usuario VARCHAR(50),
+senha VARCHAR(50),
+    
+PRIMARY KEY (id)
+)
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+varis para facilitar na digitação
+
+gr
+sexo
+email
+telefone
+endereco
+uf
+cep
+cidade
+usuario
+senha
