@@ -119,12 +119,27 @@
                                     Sexo
                                 </td>
                                 <td>
-                                    <input type="radio" name="sexo" id="sexo" value="masculino">
-                                    <label for="">Masculino</label>
-                                    <input type="radio" name="sexo" id="sexo" value="feminino">
-                                    <label for="">Feminino</label>
-                                    <input type="radio" name="sexo" id="sexo" value="outro">
-                                    <label for="">Outro</label>
+                                    %if("{{ user.sexo | e }}"=="masculino"){%
+                                        <input type="radio" name="sexo" id="sexo" value="masculino" checked>
+                                        <label for="">Masculino</label>
+                                    %}else{%
+                                        <input type="radio" name="sexo" id="sexo" value="masculino">
+                                        <label for="">Masculino</label>
+                                    %}%
+                                    %if("{{ user.sexo | e }}"=="feminino"){%
+                                        <input type="radio" name="sexo" id="sexo" value="feminino" checked>
+                                        <label for="">Feminino</label>
+                                    %}else{%
+                                        <input type="radio" name="sexo" id="sexo" value="feminino">
+                                        <label for="">Feminino</label>
+                                    %}%
+                                    %if("{{ user.sexo | e }}"=="outro"){%
+                                        <input type="radio" name="sexo" id="sexo" value="outro" checked>
+                                        <label for="">Outro</label>
+                                    %}else{%
+                                        <input type="radio" name="sexo" id="sexo" value="outro">
+                                        <label for="">Outro</label>
+                                    %}%
                                 </td>
                             </tr>
                             <tr>
