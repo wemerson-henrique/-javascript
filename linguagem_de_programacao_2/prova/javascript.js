@@ -4,7 +4,7 @@ botquestao06.addEventListener('click', questao6);
 questao06Listar.addEventListener('click', funQuest06Listar);
 
 function questao3 () {
-    var idade = window.document.getElementById('idade').nodeValue;
+    var idade = Number(window.document.getElementById('idade').value);
 
     var data = new Date(); //cria uma variaveu data
     var ano = data.getFullYear(); //pega o ano da variavel data
