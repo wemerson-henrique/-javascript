@@ -2,6 +2,8 @@ questao01.addEventListener('click',funQuest01);
 questao02.addEventListener('click',funQuest02);
 questao03.addEventListener('click',funQuest03);
 questao03Listar.addEventListener('click',funQuest03Listar);
+questao04.addEventListener('click',funQuest04);
+questao04Listar.addEventListener('click',funQuest04Listar);
 
 //----------------------------------------------------------------questão 01 ----------------------------------------------------------------
 function funQuest01 () {
@@ -103,3 +105,43 @@ function Aluno (matricula,nome,nota) {
 }
 
 //----------------------------------------------------------------questão 04 ----------------------------------------------------------------
+var nomes = new Array();
+
+function funQuest04 () {
+    var nome = window.document.getElementById('varNome').value;
+
+    var novoNome = new Nome(nome);
+
+    nomes.push(novoNome);
+
+    window.document.getElementById('varNome').value = null;
+}
+
+function funQuest04Listar () {
+
+    var resposta = `Vetor antes da inverção:<br>`;
+
+    for (var i = 0; i < nomes.length; i++) {
+
+        resposta += `| ${nomes[i].nome} `;
+
+    }
+
+    resposta += `|<br>Vetor depois da inverção:<br>`;
+
+    var nomesInvertidos = nomes.reverse();
+
+    for (var i = 0; i < nomesInvertidos.length; i++) {
+
+        resposta += `| ${nomesInvertidos[i].nome} `;
+
+    }
+
+    resposta += `|`;
+
+    window.document.getElementById('resQuest04').innerHTML = resposta;
+}
+
+function Nome (nome) {
+    this.nome = nome;
+}
