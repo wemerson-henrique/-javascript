@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="corpo">
+        <div id="questao3">
+            <p>
+                3. Crie uma página contendo os campos de entrada para nome e idade. Ao clicar no botão “Submeter”, exibir uma mensagem informando o ano de nascimento.
+            </p>
+            <form action="">
+                <table>
+                    <tr>
+                        <td>
+                            <label for="">
+                                Nome:
+                            </label>
+                        </td>
+                        <td>
+                            <input type="text" name="nome" id="nome">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="">
+                                Idade:
+                            </label>
+                        </td>
+                        <td>
+                            <input type="text" name="idade" id="idade">
+                        </td>
+                    </tr>
+                </table>
+                <input type="button" value="Submeter" id="submeter">
+            </form>
+            <p id="resposto3"></p>
+        </div>
+        <hr>
+        <div id="questao4">
+            <p>
+                4. Crie uma página contendo os campos de entrada para peso e altura. Ao clicar no botão “Calcular”, exibir uma mensagem informando o valor do IMC e sua situação. Sabendo que o IMC é calculando dividindo peso por altura ao quadrado e valores entre 18 e 25 são considerados saudáveis.
+            </p>
+            <p>
+                Use o pondo no lugar na virgula ex: 82.5
+            </p>
+            <form action="">
+                <table>
+                    <tr>
+                        <th colspan="2">
+                            Calcule seu IMC
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="">
+                               Peso
+                            </label>
+                        </td>
+                        <td>
+                            <input type="text" name="peso" id="peso" >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="">
+                               Altura
+                            </label>
+                        </td>
+                        <td>
+                            <input type="text" name="altura" id="altura">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="button" value="Calcular" id="quest4Calcular">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="">
+                              IMC
+                            </label>
+                        </td>
+                        <td>
+                            <input type="text" name="imc" id="imc">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <p id="resposto4"></p>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <hr>
+        <div id="questao6">
+            <p>
+                Escreva os dados do produto.
+            </p>
+            <form>
+                <table>
+                    <tr>
+                        <td>
+                            <label for="">
+                                Id
+                            </label>
+                        </td>
+                        <td>
+                            <input type="text" id="id">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="">
+                                Nome
+                            </label>
+                            <td>
+                                <input type="text" id="pnome">
+                            </td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="">
+                                Valor
+                            </label>
+                            <td>
+                                <input type="text" id="valor">
+                            </td>
+                        </td>
+                    </tr>
+                </table>
+                <p>
+                    <input type="button" value="CADASTRAR" id="botquestao06">
+                    <input type="button" value="LISTAR" id="questao06Listar">
+                    <input type="reset" value="LIMPAR">
+                </p>
+            </form>
+            <p id="resposto6"></p>
+        </div>
+    </div>
+    <footer>
+        <p>
+            Copyright © 2020 | Wemerson Henrique
+        </p>
+    </footer>
+    <script src="javascript.js"></script>
+</body>
+</html>
